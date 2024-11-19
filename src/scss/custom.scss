@@ -1,0 +1,32 @@
+$citrine: #CFCA3A;
+$darkmoss: #53601A;
+$ivory: #FFFCE8;
+$jet: #413842;
+$vermilion: #DD403A;
+$indianred: #E46662;
+$olive: #7D9027;
+$applegreen: #A7C035;
+
+$primary: $indianred;
+$secondary: $darkmoss;
+$light: $ivory;
+$dark: $jet;
+$danger: $vermilion;
+$info: $olive;
+$success: $applegreen;
+$warning: $citrine;
+
+$white: $light;
+$gray-100: $light;
+$gray-200: darken($light, 5%);
+$gray-300: darken($light, 10%);
+$gray-400: darken($light, 20%);
+$gray-500: lighten($dark, 30%);
+$gray-600: lighten($dark, 20%);
+$gray-700: lighten($dark, 10%);
+$gray-800: $dark;
+$gray-900: darken($dark, 10%);
+$black: darken($dark, 20%);
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
