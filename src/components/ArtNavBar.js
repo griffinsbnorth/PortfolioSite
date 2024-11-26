@@ -35,7 +35,7 @@ const ArtNavBar = () => {
               <NavDropdown.Item href="/art/ac">Apocalypse Child</NavDropdown.Item>
               <NavDropdown.Item href="/art/tst">Tora Steals Things</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="https://artistree.io/griffinnorth">Commissions</Nav.Link>
+            <Nav.Link href="https://artistree.io/griffinn">Commissions</Nav.Link>
             <Nav.Link href="/art#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>

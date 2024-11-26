@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
@@ -15,6 +15,10 @@ const DevProjectModal = (props) => {
   const description = { __html: project.desc };
 
   const [mainSlide, setMainSlide] = useState(0);
+
+  useEffect(() => {
+    setMainSlide(0);
+}, [project])
 
   const downloads = project.downloads.map((download) => {
     let link = "";
@@ -59,6 +63,14 @@ const DevProjectModal = (props) => {
     }
   });
 
+  const activeSlide = () => {
+    if (mainSlide >= project.pics.length) {
+      return 0;
+    } else {
+      return mainSlide;
+    }
+  };
+
   return (
     <>
       <Modal.Header closeButton>
@@ -67,8 +79,8 @@ const DevProjectModal = (props) => {
       <Modal.Body>
         <Row className="container text-center">
           <Col xs={12} md={8} xl={8}>
-            <Image src={images("./" + project.pics[mainSlide].lg)} alt={project.pics[mainSlide].caption} rounded fluid />
-            <h4>{project.pics[mainSlide].caption}</h4>
+            <Image src={images("./" + project.pics[activeSlide()].lg)} alt={project.pics[activeSlide()].caption} rounded fluid />
+            <h4>{project.pics[activeSlide()].caption}</h4>
           </Col>
           <Col xs={12} md={4} xl={4}>
             {slides}
