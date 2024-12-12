@@ -2,6 +2,7 @@
   "name": "griffindevapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://griffinnorth.com",
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.11.0",
     "@testing-library/jest-dom": "^5.17.0",

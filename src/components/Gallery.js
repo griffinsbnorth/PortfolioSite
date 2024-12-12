@@ -12,7 +12,6 @@ import lgZoom from 'lightgallery/plugins/zoom';
 
 const Gallery = (props) => {
     const items = props.items;
-    const itemCLass = props.itemClass === '' ? "gallery-item" : props.itemClass;
     const images = require.context("../assets/artImages", true);
 
     const getItems = useCallback(() => {
